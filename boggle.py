@@ -21,10 +21,11 @@ def clean(word):
     word = word.lower()
     return word
 
+intents = discord.Intents.all()
 
 class MyClient(discord.Client):
-    def __init__(self):
-        discord.Client.__init__(self)
+    def __init__(self, intents=intents):
+        super().__init__(intents=intents)
         self.operations = []
         self.operations += [operations.HelpOperation()]
         self.operations += [operations.SessionOperation()]
