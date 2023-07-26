@@ -17,20 +17,20 @@ def browsercontent(url):
     return mystr
 
 #English version
-#def priblink(word):
-#    return "https://www.dictionary.com/browse/"+clean(word)
-#
-#def check(word):
-#    web = browsercontent(priblink(word))
-#    if (web == "ERROR"):
-#        return False
-#    return not (("No results found for") in web) 
-
-
-# PORTUGUESE VERSION
 def priblink(word):
-    return "https://dicionario.priberam.org/"+clean(word)
+    return "https://www.dictionary.com/browse/"+clean(word)
 
 def check(word):
     web = browsercontent(priblink(word))
-    return not (("Palavra n"+chr(227)+"o encontrada.") in web) 
+    if (web == "ERROR"):
+        return False
+    return not (("No results found for") in web) 
+
+
+# PORTUGUESE VERSION
+#def priblink(word):
+#    return "https://dicionario.priberam.org/"+clean(word)
+#
+#def check(word):
+#    web = browsercontent(priblink(word))
+#    return not (("Palavra n"+chr(227)+"o encontrada.") in web) 
