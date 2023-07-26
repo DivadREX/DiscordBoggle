@@ -4,7 +4,7 @@ This is a discord bot that let's you play boggle on a server of yours! Players c
 ## Setup
 1. Follow the initial setup of creating a bot and adding it to your server [here](https://realpython.com/how-to-make-a-discord-bot-python/).
 2. Clone this repository.
-3. Install dependencies with pip. **pip install discord**, **pip install pillow**
+3. Install dependencies with pip. **pip install discord**, **pip install pillow==9.4.0**
 4. Find your bot token as described in the aforementioned [article](https://realpython.com/how-to-make-a-discord-bot-python/).
 5. Open **boggle.py** and scroll down to the last line where it says to add your token.
 6. Open a shell and run the bot with **python boggle.py**.
